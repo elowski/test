@@ -11,9 +11,8 @@
 navigator.mediaDevices.getUserMedia({audio:true}).then((dev) => {
   document.getElementById('root').insertAdjacentHTML("beforeend", dev);
   console.log(dev);
-})
 
-        navigator.mediaDevices
+  navigator.mediaDevices
     .enumerateDevices()
     .then((devices) => {
       devices.forEach((device) => {
@@ -23,6 +22,9 @@ navigator.mediaDevices.getUserMedia({audio:true}).then((dev) => {
     .catch((err) => {
       console.error(`${err.name}: ${err.message}`);
     });
+})
+
+
     </script>
   </body>
 </html>
